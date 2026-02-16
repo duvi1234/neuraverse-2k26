@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuraverse 2K26 | AIML Symposium</title>
+    <meta name="description"
+        content="Join Neuraverse 2K26, the premier AIML symposium exploring the future of intelligence. Shaping Intelligence, Empowering Tomorrow.">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./src/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="gradient-bg">
+
+    <!-- Loading Screen -->
+    <div id="loader" class="fixed inset-0 z-[100] flex items-center justify-center bg-dark">
+        <div class="relative">
+            <div class="w-24 h-24 border-4 border-prime border-t-transparent rounded-full animate-spin"></div>
+            <div
+                class="absolute inset-0 flex items-center justify-center font-orbitron text-xs text-prime animate-pulse">
+                INITIALIZING...
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- College Logo & Name (Linked) -->
+            <a href="https://sethu.ac.in/" target="_blank" class="flex items-center gap-3 group">
+                <div class="cyber-logo-container">
+                    <div class="cyber-logo-hex"></div>
+                    <div class="cyber-logo-pulse"></div>
+                    <img src="./public/images/college_logo.png" alt="SIT Logo" class="cyber-logo-img">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-[9px] text-gray-500 font-bold uppercase tracking-[0.3em] leading-tight">SETHU
+                        Institute of</span>
+                    <span
+                        class="text-sm neon-text tracking-[0.1em] group-hover:scale-105 transition-all whitespace-nowrap">TECHNOLOGY</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links (Centered on Desktop) -->
+            <div
+                class="hidden md:flex gap-8 items-center font-inter text-xs font-medium uppercase tracking-widest text-gray-300">
+                <a href="#home" class="hover:text-prime transition">Home</a>
+                <a href="#about" class="hover:text-prime transition">About</a>
+                <a href="#events" class="hover:text-prime transition">Events</a>
+                <a href="#schedule" class="hover:text-prime transition">Schedule</a>
+                <a href="#reach-us" class="hover:text-prime transition">Reach Us</a>
+            </div>
+
+            <!-- CTAs (Far Right) -->
+            <div class="flex items-center gap-6">
+                <!-- Symposium Name (Desktop Only) -->
+                <div class="hidden lg:flex items-center gap-2">
+                    <span class="text-xl font-black font-orbitron tracking-tighter text-prime">Neuraverse</span>
+                    <span class="bg-prime text-dark text-[10px] font-bold px-1 rounded uppercase">2K26</span>
+                </div>
+                <a href="#register" class="btn-primary !px-6 !py-2 !text-[10px] uppercase">Registration</a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="md:hidden text-white text-2xl" id="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Centered Layout) -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-6">
+        <div id="particles-js"></div>
+
+        <div class="max-w-4xl mx-auto w-full relative z-10 text-center" data-aos="zoom-in" data-aos-duration="1200">
+            <h4 class="text-prime font-orbitron tracking-[0.4em] mb-4 text-xs md:text-sm uppercase font-bold">Dept. of
+                CSE(AI&ML) Proudly Presents</h4>
+            <h1 class="text-6xl md:text-9xl font-black font-orbitron mb-6 leading-tight">
+                <span class="neon-text animate-glow">NEURAVERSE</span><br>
+                <span class="text-white">2K26</span>
+            </h1>
+            <p class="text-lg md:text-xl font-light tracking-wide text-gray-300 mb-8 italic">
+                “Shaping Intelligence. Empowering Tomorrow.”<br>
+                <span class="text-xs uppercase tracking-widest font-bold mt-2 block not-italic text-gray-500">Organized
+                    by BRAINOVA Student Association</span>
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <div class="flex items-center gap-3 text-gray-300 font-inter text-sm md:text-base">
+                    <i class="far fa-calendar-alt text-prime"></i>
+                    <span>MARCH 05, 2026</span>
+                </div>
+                <div class="flex items-center gap-3 text-gray-300 font-inter text-sm md:text-base">
+                    <i class="fas fa-map-marker-alt text-sec"></i>
+                    <span>MAIN AUDITORIUM, SIT</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-10">
+                <div class="flex justify-center">
+                    <a href="#about" class="btn-primary flex items-center gap-3">
+                        EXPLORE NOW <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Hero Countdown -->
+                <div class="flex flex-col items-center bg-white/5 backdrop-blur-md px-8 py-6 rounded-3xl border border-white/10"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-6 font-bold">Symposium Commences
+                        In
+                    </p>
+                    <div class="flex gap-4 md:gap-8 items-center">
+                        <div class="flex flex-col items-center">
+                            <span class="text-3xl md:text-5xl font-black font-orbitron text-white hero-days">00</span>
+                            <span
+                                class="text-[8px] md:text-[10px] text-prime font-bold tracking-widest mt-1 uppercase">Days</span>
+                        </div>
+                        <div class="text-2xl md:text-4xl font-black font-orbitron text-white/20">:</div>
+                        <div class="flex flex-col items-center">
+                            <span class="text-3xl md:text-5xl font-black font-orbitron text-white hero-hours">00</span>
+                            <span
+                                class="text-[8px] md:text-[10px] text-prime font-bold tracking-widest mt-1 uppercase">Hours</span>
+                        </div>
+                        <div class="text-2xl md:text-4xl font-black font-orbitron text-white/20">:</div>
+                        <div class="flex flex-col items-center">
+                            <span
+                                class="text-3xl md:text-5xl font-black font-orbitron text-white hero-minutes">00</span>
+                            <span
+                                class="text-[8px] md:text-[10px] text-prime font-bold tracking-widest mt-1 uppercase">Mins</span>
+                        </div>
+                        <div class="text-2xl md:text-4xl font-black font-orbitron text-white/20">:</div>
+                        <div class="flex flex-col items-center">
+                            <span
+                                class="text-3xl md:text-5xl font-black font-orbitron text-white hero-seconds">00</span>
+                            <span
+                                class="text-[8px] md:text-[10px] text-prime font-bold tracking-widest mt-1 uppercase">Secs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section (Vertical Cards) -->
+    <section id="about" class="py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="section-title">ABOUT <span class="text-prime">US</span></h2>
+
+            <div class="space-y-12">
+                <!-- Card 1 -->
+                <div class="glass-card w-full p-8 md:p-12" data-aos="fade-up">
+                    <h3
+                        class="text-2xl font-bold font-orbitron mb-6 text-prime underline underline-offset-8 decoration-prime/30">
+                        About the Association</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg italic">
+                        "Brainova" is the student association of the CSE(Artificial Intelligence and Machine Learning)
+                        Department, established to foster innovation and collaboration in AI and Machine Learning.
+                        It was founded and inaugurated by Mr.S.Mohammed Jaleel (Founder & Chairman) on September 18th,
+                        2024, in the presence of administrative members, with the support of our HOD and faculty
+                        members.
+                        Brainova aims to empower students through tech events, workshops, and symposiums, creating a
+                        dynamic platform for learning, research, and skill development in emerging technologies.
+
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card w-full p-8 md:p-12 border-l-4 border-sec" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <h3
+                        class="text-2xl font-bold font-orbitron mb-6 text-sec underline underline-offset-8 decoration-sec/30">
+                        About the Symposium</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Neuraverse 2k26 is more than a symposium; it's a gateway to the future. After the massive
+                        success
+                        of Neuraverse '25,
+                        we are back with grander challenges, higher prize pools, and cutting-edge tech discussions.
+                        Join us for an action-packed day of innovation and collaboration.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card w-full p-8 md:p-12" data-aos="fade-up" data-aos-delay="200">
+                    <h3
+                        class="text-2xl font-bold font-orbitron mb-6 text-white underline underline-offset-8 decoration-white/30">
+                        About the Department</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        The Department of Computer Science and Engineering (Artificial Intelligence & Machine Learning)
+                        was established in 2022 with a vision to excel in AI-driven education and research.
+                        Led by Dr. B. Guru Prakash, Head of the Department, we offer a cutting-edge curriculum that
+                        integrates core computer science with advanced AI and ML technologies.
+                        Our focus is on hands-on learning, industry collaborations, and research in areas like deep
+                        learning, data science, and robotics, With experienced faculty and state-of-the-art labs, we
+                        prepare students for dynamic careers in AI. We actively engage in workshops, hackathons, and
+                        innovative projects, shaping the future of intelligent computing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section (Tabbed Grid) -->
+    <section id="events" class="py-24 px-6 bg-black/30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="section-title">OUR <span class="text-prime">EVENTS</span></h2>
+
+            <!-- Tab Switcher (Pill Style) -->
+            <div class="flex flex-wrap justify-center gap-3 mb-16 px-4">
+                <button class="event-tab active px-8 py-3 rounded-full font-bold transition-all border border-prime/30"
+                    data-category="technical">TECHNICAL</button>
+                <button
+                    class="event-tab px-8 py-3 rounded-full font-bold transition-all border border-white/10 hover:border-sec"
+                    data-category="non-technical">NON-TECHNICAL</button>
+                <button
+                    class="event-tab px-8 py-3 rounded-full font-bold transition-all border border-white/10 hover:border-prime"
+                    data-category="project">PROJECT EXPO</button>
+            </div>
+
+            <!-- Technical Events -->
+            <div class="event-category grid md:grid-cols-3 gap-8 show" id="technical">
+                <!-- PixCrack -->
+                <div class="glass-card group overflow-hidden event-card cursor-pointer" data-aos="fade-up"
+                    data-brochure="./public/brochures/PixCrack.pdf">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="./public/images/PixCrack.jpg"
+                            class="w-full h-full object-cover opacity-50 transition duration-500 group-hover:scale-110 group-hover:opacity-80"
+                            alt="Event">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-2xl font-bold font-orbitron group-hover:text-prime transition">PixCrack</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-400 mb-6 line-clamp-2">A sleek two-round tech showdown of logic,
+                            clues, and blurred brilliance.</p>
+                        <ul class="text-xs space-y-2 text-gray-300 mb-6">
+                            <li><i class="fas fa-users text-prime mr-2"></i> 2 members</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- CodeConvo -->
+                <div class="glass-card group overflow-hidden event-card cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="100" data-brochure="./public/brochures/CodeConvo.pdf">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="./public/images/CodeConvo.jpg"
+                            class="w-full h-full object-cover opacity-50 transition duration-500 group-hover:scale-110 group-hover:opacity-80"
+                            alt="Event">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-2xl font-bold font-orbitron group-hover:text-prime transition">CodeConvo
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-400 mb-6 line-clamp-2">Debug & Convert – Find code errors and
+                            translate logic across languages.</p>
+                        <ul class="text-xs space-y-2 text-gray-300 mb-6">
+                            <li><i class="fas fa-users text-prime mr-2"></i> Individual</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- Sell the Future -->
+                <div class="glass-card group overflow-hidden event-card cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="200" data-brochure="./public/brochures/SellTheFuture.pdf">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="./public/images/SellTheFuture.jpg"
+                            class="w-full h-full object-cover opacity-50 transition duration-500 group-hover:scale-110 group-hover:opacity-80"
+                            alt="Event">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-2xl font-bold font-orbitron group-hover:text-prime transition">Sell The
+                                Future
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-400 mb-6 line-clamp-2">Pitch a futuristic AI startup idea with
+                            creativity, visuals, and impactful presentation.</p>
+                        <ul class="text-xs space-y-2 text-gray-300 mb-6">
+                            <li><i class="fas fa-users text-prime mr-2"></i> 2 Members</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Non-Technical (Hidden by default) -->
+            <div class="event-category hidden grid md:grid-cols-3 gap-8" id="non-technical">
+                <!-- Flip Frenzy -->
+                <div class="glass-card group overflow-hidden event-card cursor-pointer" data-aos="fade-up"
+                    data-brochure="./public/brochures/FlipFrenzy.pdf">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="./public/images/FlipFrenzy.jpg"
+                            class="w-full h-full object-cover opacity-50 transition duration-500 group-hover:scale-110 group-hover:opacity-80"
+                            alt="Event">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-2xl font-bold font-orbitron group-hover:text-prime transition">Flip Frenzy
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-400 mb-6 line-clamp-2">Snap & Flip – Capture creativity through
+                            photography and test precision with bottle-flip pyramid building.</p>
+                        <ul class="text-xs space-y-2 text-gray-300 mb-6">
+                            <li><i class="fas fa-users text-prime mr-2"></i> 2 Members</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- Brain Crack -->
+                <div class="glass-card group overflow-hidden event-card cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="100" data-brochure="./public/brochures/BrainCrack.pdf">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="./public/images/BrainCrack.jpg"
+                            class="w-full h-full object-cover opacity-50 transition duration-500 group-hover:scale-110 group-hover:opacity-80"
+                            alt="Event">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-2xl font-bold font-orbitron group-hover:text-prime transition">Brain Crack
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-400 mb-6 line-clamp-2">A high-energy battle of logic, speed, and
+                            silent clues that tests observation and instant thinking.</p>
+                        <ul class="text-xs space-y-2 text-gray-300 mb-6">
+                            <li><i class="fas fa-users text-prime mr-2"></i> 2 members</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Expo (Hidden by default) -->
+            <div class="event-category hidden grid md:grid-cols-2 gap-8" id="project">
+                <div class="glass-card group overflow-hidden event-card cursor-pointer" data-aos="fade-up"
+                    data-brochure="./public/brochures/TechVista.pdf">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="./public/images/TechVista.png"
+                            class="w-full h-full object-cover opacity-50 transition duration-500 group-hover:scale-110 group-hover:opacity-80"
+                            alt="Event">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-2xl font-bold font-orbitron group-hover:text-prime transition">TechVista
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-prime font-bold mb-4 uppercase tracking-widest">Prize Pool: ₹10,000</h4>
+                        <p class="text-sm text-gray-400 mb-6">Where ideas transform into impactful project
+                            presentations.</p>
+                        <ul class="text-xs space-y-2 text-gray-300 mb-6">
+                            <li><i class="fas fa-users text-prime mr-2"></i> 1-4 Members</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="section-title">EVENT <span class="text-prime">TIMELINE</span></h2>
+
+            <div class="relative">
+                <div class="timeline-line"></div>
+
+                <!-- Inauguration -->
+                <div class="mb-12 flex flex-col md:flex-row items-center gap-8 relative" data-aos="fade-right">
+                    <div class="md:w-1/2 flex justify-end">
+                        <div class="glass-card p-6 text-right border-r-4 border-prime">
+                            <span class="text-prime font-bold">09:30 AM - 10:00 AM</span>
+                            <h3 class="text-xl font-bold font-orbitron mt-1">Inauguration</h3>
+                            <p class="text-xs text-gray-400">Main Auditorium</p>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-prime rounded-full border-4 border-dark z-10 shadow-[0_0_15px_rgba(0,242,255,0.5)]">
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+
+                <!-- TechVista -->
+                <div class="mb-12 flex flex-col md:flex-row items-center gap-8 relative" data-aos="fade-left">
+                    <div class="md:w-1/2"></div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-sec rounded-full border-4 border-dark z-10 shadow-[0_0_15px_rgba(112,0,255,0.5)]">
+                    </div>
+                    <div class="md:w-1/2 flex justify-start">
+                        <div class="glass-card p-6 border-l-4 border-sec">
+                            <span class="text-sec font-bold">10:30 AM - 12:30 PM</span>
+                            <h3 class="text-xl font-bold font-orbitron mt-1">TechVista</h3>
+                            <p class="text-xs text-gray-400">ECE Seminar Hall</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Code Convo -->
+                <div class="mb-12 flex flex-col md:flex-row items-center gap-8 relative" data-aos="fade-right">
+                    <div class="md:w-1/2 flex justify-end">
+                        <div class="glass-card p-6 text-right border-r-4 border-prime">
+                            <span class="text-prime font-bold">10:30 AM - 11:30 AM</span>
+                            <h3 class="text-xl font-bold font-orbitron mt-1">Code Convo</h3>
+                            <p class="text-xs text-gray-400">Cybersecurity Lab(Civil Dept.) </p>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-prime rounded-full border-4 border-dark z-10 shadow-[0_0_15px_rgba(0,242,255,0.5)]">
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+
+                <!-- Pix Crack -->
+                <div class="mb-12 flex flex-col md:flex-row items-center gap-8 relative" data-aos="fade-left">
+                    <div class="md:w-1/2"></div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-sec rounded-full border-4 border-dark z-10 shadow-[0_0_15px_rgba(112,0,255,0.5)]">
+                    </div>
+                    <div class="md:w-1/2 flex justify-start">
+                        <div class="glass-card p-6 border-l-4 border-sec">
+                            <span class="text-sec font-bold">11:45 AM - 12:45 PM</span>
+                            <h3 class="text-xl font-bold font-orbitron mt-1">Pix Crack</h3>
+                            <p class="text-xs text-gray-400">NexGen Lab(AIML Dept.)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sell the Future -->
+                <div class="mb-12 flex flex-col md:flex-row items-center gap-8 relative" data-aos="fade-right">
+                    <div class="md:w-1/2 flex justify-end">
+                        <div class="glass-card p-6 text-right border-r-4 border-prime">
+                            <span class="text-prime font-bold">01:30 PM - 02:30 PM</span>
+                            <h3 class="text-xl font-bold font-orbitron mt-1">Sell the Future</h3>
+                            <p class="text-xs text-gray-400">E306 & NexGen Lab(AIML Dept.)</p>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-prime rounded-full border-4 border-dark z-10 shadow-[0_0_15px_rgba(0,242,255,0.5)]">
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+
+                <!-- Flip Frenzy -->
+                <div class="mb-12 flex flex-col md:flex-row items-center gap-8 relative" data-aos="fade-left">
+                    <div class="md:w-1/2"></div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-sec rounded-full border-4 border-dark z-10 shadow-[0_0_15px_rgba(112,0,255,0.5)]">
+                    </div>
+                    <div class="md:w-1/2 flex justify-start">
+                        <div class="glass-card p-6 border-l-4 border-sec">
+                            <span class="text-sec font-bold">02:30 PM - 03:30 PM</span>
+                            <h3 class="text-xl font-bold font-orbitron mt-1">Flip Frenzy</h3>
+                            <p class="text-xs text-gray-400">Annexure Class Room</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brain Crack -->
+                <div class="mb-12 flex flex-col md:flex-row items-center gap-8 relative" data-aos="fade-right">
+                    <div class="md:w-1/2 flex justify-end">
+                        <div class="glass-card p-6 text-right border-r-4 border-prime">
+                            <span class="text-prime font-bold">02:45 PM - 03:45 PM</span>
+                            <h3 class="text-xl font-bold font-orbitron mt-1">Brain Crack</h3>
+                            <p class="text-xs text-gray-400">E206(EEE Dept.)</p>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-prime rounded-full border-4 border-dark z-10 shadow-[0_0_15px_rgba(0,242,255,0.5)]">
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section id="speakers" class="py-24 px-6 bg-black/30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="section-title">GUESTS OF <span class="text-prime">HONOR</span></h2>
+            <div class="flex justify-center flex-wrap gap-8">
+                <!-- Speaker 1 -->
+                <div class="glass-card p-6 text-center group" data-aos="flip-left">
+                    <div class="w-32 h-32 mx-auto rounded-full border-2 border-prime p-1 mb-6 relative overflow-hidden">
+                        <img src="./public/images/chief_guest.jpg" alt="Speaker"
+                            class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <h3 class="text-lg font-bold font-orbitron">Mr.Maheswaran S </h3>
+                    <p class="text-xs text-prime font-bold mb-4 uppercase tracking-tighter">Senior Manager, R&D - Aptean
+                    </p>
+                    <div class="flex justify-center gap-3 text-gray-400">
+                        <i class="fab fa-linkedin hover:text-prime cursor-pointer"></i>
+                        <i class="fab fa-twitter hover:text-prime cursor-pointer"></i>
+                    </div>
+                </div>
+                <!-- ... others ... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Section -->
+    <section id="register" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto glass-card p-8 md:p-16 border-prime overflow-hidden relative">
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-prime/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-sec/10 rounded-full blur-3xl"></div>
+
+            <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-orbitron font-black mb-6">RESERVE YOUR <span class="text-prime">SLOT</span>
+                    </h2>
+                    <p class="text-gray-400 mb-4">Don't miss the opportunity to be part of the most awaited CSE(AI&ML)
+                        symposium of the year.</p>
+                    <div class="mb-8 p-4 glass-card border-prime/30 flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-prime/10 flex items-center justify-center text-prime text-xl">
+                            ₹
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-black">Registration Fee</p>
+                            <p class="text-xl font-bold font-orbitron text-white">₹350 <span
+                                    class="text-[10px] text-gray-500 font-normal uppercase">(Per Head)</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="countdown" class="flex gap-4 mb-12">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold font-orbitron w-16 h-16 glass-card flex items-center justify-center border-prime"
+                                id="days">00</div>
+                            <p class="text-[10px] mt-2 text-gray-400">DAYS</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold font-orbitron w-16 h-16 glass-card flex items-center justify-center border-prime"
+                                id="hours">00</div>
+                            <p class="text-[10px] mt-2 text-gray-400">HOURS</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold font-orbitron w-16 h-16 glass-card flex items-center justify-center border-prime"
+                                id="minutes">00</div>
+                            <p class="text-[10px] mt-2 text-gray-400">MINS</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <img src=".\public\images\qr_code.jpg" alt="QR"
+                            class="w-32 h-32 rounded-lg border-2 border-white/20 p-2">
+                        <div>
+                            <p class="text-sm font-bold">Scan to Register</p>
+                            <p class="text-xs text-gray-400 mt-2">Scan the QR code or click the button to open Google
+                                Forms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3FpiBwLGJ3dvdqKd-0zeWBmudPl1AtD4LTROP0tcj01Fkpg/viewform?usp=sharing&ouid=108376629288333451514"
+                        target="_blank"
+                        class="btn-primary inline-flex items-center justify-center !w-full !py-6 !text-xl mb-6">
+                        <i class="fas fa-edit mr-2"></i> OPEN REGISTRATION FORM
+                    </a>
+                    <p class="text-xs text-gray-500 italic">* Registration closes on March 03, 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Reach Us & Instructions (Two-Column Layout) -->
+    <section id="reach-us" class="py-24 px-6 bg-black/30">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+            <!-- Reach Us -->
+            <div class="glass-card p-8 md:p-12 relative overflow-hidden" data-aos="fade-right">
+                <div class="absolute -top-12 -right-12 w-32 h-32 bg-prime/10 rounded-full blur-2xl"></div>
+                <h2 class="text-3xl font-bold font-orbitron mb-8 text-prime uppercase">Reach Us</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 glass-card flex items-center justify-center text-prime shrink-0">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-black mb-1">Convenor</p>
+                            <p class="text-sm font-mono">+91 95002 12042</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 glass-card flex items-center justify-center text-prime shrink-0">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-black mb-1">Venue</p>
+                            <p class="text-sm">Main Auditorium, SIT Campus, Kariapatti.</p>
+                        </div>
+                    </div>
+                    <a href="https://maps.app.goo.gl/RKdYqFBJqdBbtZYV6" target="_blank"
+                        class="block w-full py-4 text-center glass-card border-prime/30 text-prime font-bold hover:bg-prime/10 transition mt-6">
+                        VIEW ON GOOGLE MAPS <i class="fas fa-location-arrow ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Instructions -->
+            <div class="glass-card p-8 md:p-12 relative overflow-hidden" data-aos="fade-left">
+                <div class="absolute -bottom-12 -left-12 w-32 h-32 bg-sec/10 rounded-full blur-2xl"></div>
+                <h2 class="text-3xl font-bold font-orbitron mb-8 text-sec uppercase">Instructions</h2>
+                <ul class="space-y-4 text-sm text-gray-300">
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-sec"></i>
+                        <span>Formal dress code is mandatory for all participants.</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-sec"></i>
+                        <span>Participants must carry their College ID card for entry.</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-sec"></i>
+                        <span>Certificates will be provided to all registered participants.</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-sec"></i>
+                        <span>Mobile phones are strictly prohibited during technical rounds.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coordinators (Moved below Reach Us) -->
+    <section id="coordinators" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="section-title">CORE <span class="text-prime">TEAM</span></h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="glass-card p-8 group" data-aos="fade-right">
+                    <h3
+                        class="text-xl font-bold font-orbitron mb-6 text-prime uppercase tracking-wider flex items-center gap-3">
+                        <i class="fas fa-chalkboard-teacher text-sm"></i> Faculty Coordinators
+                    </h3>
+                    <div class="space-y-6">
+                        <!-- Faculty 1 -->
+                        <div class="flex justify-between items-center border-b border-white/5 pb-4 group/item">
+                            <div>
+                                <p class="font-bold text-white group-hover/item:text-prime transition text-lg">
+                                    Mr. Yogadinesh S</p>
+                                <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">AP/CSE(AI&ML)
+                                </p>
+                            </div>
+                            <div class="flex gap-4 text-gray-500">
+                                <a href="tel: 9500212042" class="hover:text-prime transition"><i
+                                        class="fas fa-phone-alt text-xs"></i></a>
+                            </div>
+                        </div>
+                        <!-- Faculty 2 -->
+                        <div class="flex justify-between items-center border-b border-white/5 pb-4 group/item">
+                            <div>
+                                <p class="font-bold text-white group-hover/item:text-prime transition text-lg">
+                                    Mrs. Nasheem Banu M</p>
+                                <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">AP/CSE(AI&ML)
+                                </p>
+                            </div>
+                            <div class="flex gap-4 text-gray-500">
+                                <a href="tel: 8939102449" class="hover:text-prime transition"><i
+                                        class="fas fa-phone-alt text-xs"></i></a>
+                            </div>
+                        </div>
+                        <!-- Faculty 3 -->
+                        <div class="flex justify-between items-center group/item">
+                            <div>
+                                <p class="font-bold text-white group-hover/item:text-prime transition text-lg">
+                                    Ms. Ayisha G</p>
+                                <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">AP/CSE(AI&ML)
+                                </p>
+                            </div>
+                            <div class="flex gap-4 text-gray-500">
+                                <a href="tel: 9363765197" class="hover:text-prime transition"><i
+                                        class="fas fa-phone-alt text-xs"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card p-8 group" data-aos="fade-left">
+                    <h3
+                        class="text-xl font-bold font-orbitron mb-6 text-sec uppercase tracking-wider flex items-center gap-3">
+                        <i class="fas fa-user-graduate text-sm"></i> Student Coordinators
+                    </h3>
+                    <div class="space-y-6">
+                        <!-- Student 1 (III Year) -->
+                        <div class="flex justify-between items-center border-b border-white/5 pb-4 group/item">
+                            <div>
+                                <p class="font-bold text-white group-hover/item:text-sec transition text-lg">Mohammed
+                                    Abdullah H</p>
+                                <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">III Year CSE(AI&ML)
+                                </p>
+                            </div>
+                            <div class="flex gap-4 text-gray-500">
+                                <a href="#tel: 9944174595" class="hover:text-sec transition"><i
+                                        class="fas fa-phone-alt text-xs"></i></a>
+                            </div>
+                        </div>
+                        <!-- Student 2 (III Year) -->
+                        <div class="flex justify-between items-center border-b border-white/5 pb-4 group/item">
+                            <div>
+                                <p class="font-bold text-white group-hover/item:text-sec transition text-lg">
+                                    Gurudanvarsh B P</p>
+                                <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">III Year CSE(AI&ML)
+                                </p>
+                            </div>
+                            <div class="flex gap-4 text-gray-500">
+                                <a href="tel: 8072421516" class="hover:text-sec transition"><i
+                                        class="fas fa-phone-alt text-xs"></i></a>
+                            </div>
+                        </div>
+                        <!-- Student 3 (III Year) -->
+                        <div class="flex justify-between items-center border-b border-white/5 pb-4 group/item">
+                            <div>
+                                <p class="font-bold text-white group-hover/item:text-sec transition text-lg">Madhumitha
+                                    M</p>
+                                <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">III Year CSE(AI&ML)
+                                </p>
+                            </div>
+                            <div class="flex gap-4 text-gray-500">
+                                <a href="tel: 8015424001" class="hover:text-sec transition"><i
+                                        class="fas fa-phone-alt text-xs"></i></a>
+                            </div>
+                        </div>
+                        <!-- Student 4 (II Year) -->
+                        <div class="flex justify-between items-center border-b border-white/5 pb-4 group/item">
+                            <div>
+                                <p class="font-bold text-white group-hover/item:text-sec transition text-lg">Mohamed
+                                    Yousuf A</p>
+                                <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">II Year CSE(AI&ML)
+                                </p>
+                            </div>
+                            <div class="flex gap-4 text-gray-500">
+                                <a href="tel: 6379334077" class="hover:text-sec transition"><i
+                                        class="fas fa-phone-alt text-xs"></i></a>
+                            </div>
+                        </div>
+                        <!-- Student 5 (II Year) -->
+                        <div class="flex justify-between items-center group/item">
+                            <div>
+                                <p class="font-bold text-white group-hover/item:text-sec transition text-lg">Sana Asmi S
+                                </p>
+                                <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">II Year CSE(AI&ML)
+                                </p>
+                            </div>
+                            <div class="flex gap-4 text-gray-500">
+                                <a href="tel: 9962124826" class="hover:text-sec transition"><i
+                                        class="fas fa-phone-alt text-xs"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Office Bearers Section -->
+            <div class="mt-12 glass-card p-10" data-aos="fade-up">
+                <h3
+                    class="text-2xl font-bold font-orbitron mb-12 text-white uppercase tracking-widest flex items-center justify-center gap-4">
+                    <span class="w-12 h-[1px] bg-gradient-to-r from-transparent to-prime"></span>
+                    <i class="fas fa-award text-prime animate-pulse"></i> Office Bearers
+                    <span class="w-12 h-[1px] bg-gradient-to-l from-transparent to-prime"></span>
+                </h3>
+
+                <div class="grid grid-cols-2 lg:grid-cols-5 gap-10">
+                    <!-- Office Bearer 1 -->
+                    <div class="text-center group/bearer">
+                        <div class="mb-6 relative">
+                            <div class="w-16 h-16 mx-auto flex items-center justify-center relative">
+                                <div
+                                    class="absolute inset-0 bg-prime/10 rotate-45 rounded-lg group-hover/bearer:rotate-90 group-hover/bearer:bg-prime/20 transition-all duration-700">
+                                </div>
+                                <div
+                                    class="absolute inset-0 border border-prime/30 rotate-45 rounded-lg group-hover/bearer:rotate-90 transition-all duration-700">
+                                </div>
+                                <i
+                                    class="fas fa-crown text-2xl text-prime drop-shadow-[0_0_10px_rgba(0,242,255,0.5)]"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-white text-lg group-hover/bearer:text-prime transition-colors">Daniel
+                            Prem Kumar P
+                        </h4>
+                        <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mt-1">III Year
+                            CSE(AI&ML)</p>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-black mt-2">President</p>
+                    </div>
+
+                    <!-- Office Bearer 2 -->
+                    <div class="text-center group/bearer">
+                        <div class="mb-6 relative">
+                            <div class="w-16 h-16 mx-auto flex items-center justify-center relative">
+                                <div
+                                    class="absolute inset-0 bg-sec/10 rotate-45 rounded-lg group-hover/bearer:rotate-90 group-hover/bearer:bg-sec/20 transition-all duration-700">
+                                </div>
+                                <div
+                                    class="absolute inset-0 border border-sec/30 rotate-45 rounded-lg group-hover/bearer:rotate-90 transition-all duration-700">
+                                </div>
+                                <i class="fas fa-star text-2xl text-sec drop-shadow-[0_0_10px_rgba(112,0,255,0.5)]"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-white text-lg group-hover/bearer:text-sec transition-colors">Senthil
+                            Kumar S S
+                        </h4>
+                        <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mt-1">II Year
+                            CSE(AI&ML)</p>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-black mt-2">Vice President
+                        </p>
+                    </div>
+
+                    <!-- Office Bearer 3 -->
+                    <div class="text-center group/bearer">
+                        <div class="mb-6 relative">
+                            <div class="w-16 h-16 mx-auto flex items-center justify-center relative">
+                                <div
+                                    class="absolute inset-0 bg-white/5 rotate-45 rounded-lg group-hover/bearer:rotate-90 group-hover/bearer:bg-white/10 transition-all duration-700">
+                                </div>
+                                <div
+                                    class="absolute inset-0 border border-white/20 rotate-45 rounded-lg group-hover/bearer:rotate-90 transition-all duration-700">
+                                </div>
+                                <i
+                                    class="fas fa-file-signature text-2xl text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-white text-lg group-hover/bearer:text-white transition-colors">Karanya
+                            C S
+                        </h4>
+                        <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mt-1">III Year
+                            CSE(AI&ML)</p>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-black mt-2">Secretary</p>
+                    </div>
+
+                    <!-- Office Bearer 4 -->
+                    <div class="text-center group/bearer">
+                        <div class="mb-6 relative">
+                            <div class="w-16 h-16 mx-auto flex items-center justify-center relative">
+                                <div
+                                    class="absolute inset-0 bg-prime/10 rotate-45 rounded-lg group-hover/bearer:rotate-90 group-hover/bearer:bg-prime/20 transition-all duration-700">
+                                </div>
+                                <div
+                                    class="absolute inset-0 border border-prime/30 rotate-45 rounded-lg group-hover/bearer:rotate-90 transition-all duration-700">
+                                </div>
+                                <i
+                                    class="fas fa-key text-2xl text-prime drop-shadow-[0_0_10px_rgba(0,242,255,0.5)]"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-white text-lg group-hover/bearer:text-prime transition-colors">
+                            Miruthulashree D G
+                        </h4>
+                        <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mt-1">II Year
+                            CSE(AI&ML)</p>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-black mt-2">Vice-Secretary
+                        </p>
+                    </div>
+
+                    <!-- Office Bearer 5 -->
+                    <div class="text-center group/bearer">
+                        <div class="mb-6 relative">
+                            <div class="w-16 h-16 mx-auto flex items-center justify-center relative">
+                                <div
+                                    class="absolute inset-0 bg-sec/10 rotate-45 rounded-lg group-hover/bearer:rotate-90 group-hover/bearer:bg-sec/20 transition-all duration-700">
+                                </div>
+                                <div
+                                    class="absolute inset-0 border border-sec/30 rotate-45 rounded-lg group-hover/bearer:rotate-90 transition-all duration-700">
+                                </div>
+                                <i
+                                    class="fas fa-coins text-2xl text-sec drop-shadow-[0_0_10px_rgba(112,0,255,0.5)]"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-white text-lg group-hover/bearer:text-sec transition-colors">Kishore
+                            Kanna S
+                        </h4>
+                        <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mt-1">III Year
+                            CSE(AI&ML)</p>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-black mt-2">Treasurer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 glass-card flex items-center justify-center text-prime opacity-0 translate-y-10 transition-all duration-500 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <footer class="py-12 px-6 border-t border-white/10 mt-24">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div class="col-span-2">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="text-3xl font-black font-orbitron tracking-tighter text-prime">Neuraverse</span>
+                    <span class="bg-prime text-dark text-xs font-bold px-1 rounded">2K26</span>
+                </div>
+                <p class="text-gray-400 max-w-sm mb-6">
+                    Organized by the Department of Artificial Intelligence & Machine Learning.
+                    Empowering students to lead the AI revolution.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 glass-card flex items-center justify-center hover:bg-prime hover:text-dark transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 glass-card flex items-center justify-center hover:bg-prime hover:text-dark transition">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 glass-card flex items-center justify-center hover:bg-prime hover:text-dark transition">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold font-orbitron mb-6 text-sm underline decoration-prime underline-offset-8">QUICK
+                    LINKS</h4>
+                <ul class="space-y-4 text-sm text-gray-400">
+                    <li><a href="#home" class="hover:text-prime">Home</a></li>
+                    <li><a href="#events" class="hover:text-prime">Events</a></li>
+                    <li><a href="#register" class="hover:text-prime">Registration</a></li>
+                    <li><a href="#" class="hover:text-prime">Gallery</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold font-orbitron mb-6 text-sm underline decoration-sec underline-offset-8">CONTACT US
+                </h4>
+                <p class="text-sm text-gray-400 mb-2">neuraverse25@gmail.com</p>
+                <p class="text-sm text-gray-400 mb-6">+91 9500212042</p>
+                <p class="text-xs text-gray-500">Sethu Institute of Technology, Kariapatti</p>
+            </div>
+        </div>
+        <div class="text-center mt-12 py-8 border-t border-white/5 text-sm text-gray-400">
+            &copy; 2026 Neuraverse. Created with ❤️ by Durga Devi R | III Year CSE(AI&ML).
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./src/main.ts" type="module"></script>
+    <!-- Event Brochure Modal -->
+    <div id="event-modal"
+        class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/90 backdrop-blur-md p-4">
+        <div class="relative w-full max-w-4xl bg-dark border border-prime/30 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,242,255,0.2)] flex flex-col md:flex-row transform transition-all scale-95 opacity-0"
+            id="modal-content">
+            <!-- Close Button -->
+            <button id="close-modal"
+                class="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-prime/20 rounded-full flex items-center justify-center text-white hover:text-prime transition">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Modal Image -->
+            <div class="w-full md:w-1/2 h-64 md:h-auto relative group">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent z-10"></div>
+                <img id="modal-image" src="" alt="Event Image" class="w-full h-full object-cover">
+                <div class="absolute bottom-6 left-6 z-20">
+                    <span
+                        class="bg-prime text-dark text-[10px] font-bold px-2 py-1 rounded uppercase mb-2 inline-block">Event</span>
+                </div>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-dark/95">
+                <h2 id="modal-title"
+                    class="text-3xl md:text-4xl font-black font-orbitron text-white mb-4 leading-tight"></h2>
+                <div class="w-16 h-1 bg-prime mb-6"></div>
+
+                <p id="modal-desc"
+                    class="text-gray-300 text-sm md:text-base leading-relaxed mb-8 italic border-l-2 border-white/20 pl-4">
+                </p>
+
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-1">Participants</p>
+                        <p id="modal-participants" class="text-white font-orbitron flex items-center gap-2">
+
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-1">Registration</p>
+                        <p class="text-prime font-bold">₹350 <span
+                                class="text-[10px] text-gray-500 font-normal">(Base)</span></p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <a href="#" id="modal-brochure-btn" target="_blank"
+                        class="flex-1 btn-primary bg-transparent border border-prime text-prime hover:bg-prime hover:text-dark text-center group relative overflow-hidden flex items-center justify-center">
+                        <span class="relative z-10"><i class="fas fa-file-pdf mr-2"></i> BROCHURE</span>
+                    </a>
+                    <a href="#register" id="modal-register-btn"
+                        class="flex-1 btn-primary text-center group relative overflow-hidden flex items-center justify-center">
+                        <span class="relative z-10">REGISTER NOW</span>
+                        <div
+                            class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@theme {
+    --color-prime: #00f2ff;
+    --color-sec: #7000ff;
+    --color-dark: #050505;
+    --font-orbitron: "Orbitron", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+    --font-inter: "Inter", sans-serif;
+
+    @keyframes glow {
+        from {
+            text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff;
+        }
+
+        to {
+            text-shadow: 0 0 20px #7000ff, 0 0 40px #7000ff;
+        }
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.animate-scroll {
+    animation: scroll 20s linear infinite;
+}
+
+
+:root {
+    color-scheme: dark;
+}
+
+body {
+    @apply font-poppins bg-dark text-white overflow-x-hidden;
+    background: radial-gradient(circle at 50% 50%, #0a0a0a 0%, #050505 100%);
+}
+
+.glass-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl relative overflow-hidden;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent,
+            rgba(0, 242, 255, 0.1),
+            transparent 30%);
+    animation: rotate 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.glass-card:hover::before {
+    opacity: 1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Shine Sweep Effect */
+.glass-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent);
+    transform: skewX(-25deg);
+    transition: 0.75s;
+}
+
+.glass-card:hover::after {
+    left: 125%;
+}
+
+.glass-card:hover {
+    @apply border-white/30;
+    box-shadow: 0 20px 40px 0 rgba(0, 242, 255, 0.2),
+        0 0 20px 0 rgba(112, 0, 255, 0.1);
+    transform: translateY(-10px) scale(1.02);
+}
+
+.neon-text {
+    @apply font-orbitron font-bold;
+    background: linear-gradient(to right, #00f2ff, #7000ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.neon-border {
+    border: 1px solid transparent;
+    background: linear-gradient(#050505, #050505) padding-box,
+        linear-gradient(to right, #00f2ff, #7000ff) border-box;
+}
+
+.btn-primary {
+    @apply px-8 py-3 rounded-full font-bold transition-all duration-300 relative overflow-hidden;
+    background: linear-gradient(45deg, #00f2ff, #7000ff);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary:hover {
+    @apply scale-105;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+}
+
+.btn-secondary {
+    @apply px-8 py-3 rounded-full font-bold border-2 border-prime text-prime transition-all duration-300;
+}
+
+.btn-secondary:hover {
+    @apply bg-prime text-dark;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.section-title {
+    @apply text-4xl md:text-5xl font-orbitron font-black text-center mb-12 uppercase tracking-widest;
+}
+
+.gradient-bg {
+    background: radial-gradient(circle at top right, rgba(112, 0, 255, 0.15), transparent),
+        radial-gradient(circle at bottom left, rgba(0, 242, 255, 0.15), transparent);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#00f2ff, #7000ff);
+    border-radius: 10px;
+}
+
+/* Event Tabs */
+.event-tab {
+    @apply backdrop-blur-md cursor-pointer;
+}
+
+.event-tab.active {
+    @apply bg-prime text-dark border-prime;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+}
+
+.event-category {
+    transition: all 0.5s ease-in-out;
+}
+
+.event-category.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.event-category.show {
+    display: grid;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cyber Logo Effect */
+.cyber-logo-container {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.cyber-logo-hex {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 242, 255, 0.1);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    transition: all 0.5s ease;
+}
+
+.group:hover .cyber-logo-hex {
+    background: rgba(0, 242, 255, 0.2);
+    border-color: var(--color-prime);
+    transform: rotate(90deg);
+    box-shadow: 0 0 15px var(--color-prime);
+}
+
+.cyber-logo-icon {
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 5px var(--color-prime));
+    transition: all 0.5s ease;
+}
+
+.group:hover .cyber-logo-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px var(--color-prime));
+}
+
+.cyber-logo-pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    border: 1px solid var(--color-prime);
+    opacity: 0;
+}
+
+.group:hover .cyber-logo-pulse {
+    animation: cyber-pulse 1.5s infinite;
+}
+
+@keyframes cyber-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.cyber-logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px var(--color-prime)) brightness(1.2);
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.group:hover .cyber-logo-img {
+    transform: scale(1.2) rotate(5deg);
+    filter: drop-shadow(0 0 12px var(--color-prime)) brightness(1.4);
+}
