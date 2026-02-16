@@ -278,3 +278,71 @@ body {
     transform: scale(1.2) rotate(5deg);
     filter: drop-shadow(0 0 12px var(--color-prime)) brightness(1.4);
 }
+
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+    /* Prevent horizontal overflow */
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* Fix section padding on mobile */
+    section {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    /* Adjust hero text size */
+    .section-title {
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+    
+    /* Fix glass card spacing */
+    .glass-card {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Prevent text overflow */
+    h1, h2, h3, h4, h5, h6 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    /* Fix button sizing */
+    .btn-primary, .btn-secondary {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.875rem;
+    }
+    
+    /* Fix modal on mobile */
+    #event-modal .glass-card {
+        max-width: 95vw;
+        margin: 1rem;
+    }
+    
+    /* Fix countdown spacing */
+    #countdown {
+        gap: 0.5rem !important;
+    }
+    
+    /* Fix navbar on mobile */
+    #navbar {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.75rem !important;
+    }
+    
+    /* Fix event cards */
+    .event-category {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+}
